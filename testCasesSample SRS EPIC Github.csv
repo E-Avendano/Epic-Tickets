@@ -1,0 +1,27 @@
+﻿Test Case Template,,,,,,,,,
+TestCaseId,Component,Priority,Description/Test Summary,Pre-requisites,Test Steps,Expected Result,Actual Result,Status,Test Executed By
+UserTC001          ,User Registration,High,Verify that a new user can successfully register with valid credentials.,User is on the registration page,"1. Enter valid data for all required fields (name, email, password, etc.).
+2. Click on ""Register"".","The user is successfully registered, notification sent, provided option home/profile","User successfully registered notification sent, option for home/profile provided ",Pass,JorgeA
+UserTC002          ,User Authentication,High,Validate that a registered user can log in with valid credentials.,The user is registered in the system,"1. Go to the login page.
+2. Enter the correct email & password.
+3. Click on ""Login"".",The user successfully logs in & direct to main page. ,Validation successful redirection acccomplished,Pass,JorgeA
+SearchTC003          ,Movie Search,Medium,Ensure that the user can search for a movie by its title & see the relevant details.,Movies are available in the database.,"1. Enter a movie title in the search bar.
+2. Click ""Search"".","The search results display the correct movie & its relevant details (e.g., title, rating, schedule).",Correct movie is returned ,Pass,JorgeA
+SelectionTC004,Seat Selection,High,Verify that a user can select available seats from the visual seating layout & reserve for the aloted time.,The user is on the seat selection page.,"1. Click on available seats in the seating layout.
+2. Confirm seat selection",The selected seats are highlighted & confirmed for purchase.,Available seats reserved for the aloted time.,Pass,JorgeA
+CheckoutTC005,Guest Checkout,High,Ensure that a guest user can purchase tickets without registering an account.,"The movie is available for booking, & the user is a guest.","1. Select a movie & available seats.
+2. Proceed to checkout.
+3. Complete payment using valid payment details.","The purchase is successful, & the guest user receives a confirmation & QR code.",User successfully purchases selection & receives with QR code.,Pass,JorgeA
+PaymentTC006,Payment Gateway,High,Validate that payment fails when incorrect or invalid card information is used.,The user has a invalid payment method at the payment stage.,"1. Enter invalid credit card details.                            2. Verify information
+3. Click ""Pay"".",The system shows a payment failure message & requests valid card information.,Payment fails & prompts user to enter valid card information,Pass,JorgeA
+LogoutTC007,User Session Management,Medium,Verify that the user can log out from their account successfully.,The user is logged in.,"1. Click the ""Logout"" button in the account dashboard.",The user is logged out & redirected to the homepage.,User successfully logs out.,Pass,JorgeA
+NotificationsTC008,Email Notification System for purchased confirmation,High,Ensure that an email confirmation is sent after a successful ticket purchase with QR ticket.,The user or guest has completed the purchase & entered their email address.,"1. Complete the ticket purchase.
+2. Check the registered email for the confirmation.",The user receives an email with the QR ticket details & confirmation.,User promptly receives notification with QR ticket.  ,Pass,JorgeA
+PasswordTC009,User Authentication Password recovery,High,Validate that a registered user can recover their password via email or text.,The user is on the login page & has forgotten their password.,"1. Click ""Forgot Password"".
+2. Enter the registered email.
+3. Follow the steps in the email to reset the password.",The user is able to reset their password & log in with the new credentials.,User successfully reset password & able to log in.,Pass,JorgeA
+TimeoutTC010,User Session Management Timeout hadling,Medium,Verify that the system properly handles session timeout & redirects the user to the login page after inactivity.,The user is logged in & has been inactive for a more than 30 minutes,"1. Log in to the account.
+2. Remain inactive for 30 minutes or longer.
+3.Attempt to perform an action (e.g., search for a movie or select a seat).",The system redirects the user to the login page with a session timeout message,User is logged out after no activity longer than 30 minutes.,Pass,JorgeA
+TimeTC011,Web Performance (Front-end and back-end),High,Test to insure website pages open in less than 2 seconds under normal traffic conditions. ,"Functional environment, browser compatibility, network connection & stability.","1. Select compaitble browser & open website URL. 
+2. Time total time for complete load time for each pase, link operations, & purchase process.                          3. Repeat for different browsers.",Website loads fully (all visible elements) in less than 2 seconds across desktop and mobile platforms.,"All pages, links, & purchasing pages loaded in less than 2 seconds.",Pass,JorgeA
